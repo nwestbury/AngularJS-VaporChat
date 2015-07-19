@@ -1,0 +1,22 @@
+﻿<div class="panel-body chat-box-main" scroll-glue>
+    <div ng-controller="listCtrl">
+        <div class="chat-box-message" ng-repeat="msgList in superMsgList">
+            <div class="chat-box-left">
+                <div ng-repeat="msg in msgList track by msg.time">
+                    {{ msg.text }}
+                </div>
+            </div>
+            
+            <div class="chat-box-name-left">
+                    <img ng-src="img/icons/{{ msgList[0].name }}.jpg" alt="bootstrap Chat box user image" class="img-circle" />
+                    - {{ msgList[0].name }}
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="chat-box-footer" ng-controller="chatFormCtrl as cF">
+    <form ng-submit="cF.addMsg()"> 
+            <input type="text" class="form-control" name="msg" ng-model="cF.text" autocomplete="off" placeholder="Enter Text Here..." ng-minlength="1">
+    </form>
+</div>

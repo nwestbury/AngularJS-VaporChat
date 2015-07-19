@@ -1,0 +1,16 @@
+﻿<div width="100%">
+    <table id="chatTable" class="table">
+        <thead>
+            <tr>
+                <th class="aligncenter">Status</th>
+                <th class="aligncenter">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr ng-repeat="row in tableData">
+               <td align="center"><div ng-class="row.online ? 'green-gradient' : 'red-gradient'" class="fortypx img-circle animate-spin"></div></td>
+               <td align="center"><a ng-href="#/room/{{row.name}}">{{row.name}}</a></td>
+           </tr>
+        </tbody>
+    </table>
+</div>

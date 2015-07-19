@@ -1,0 +1,1 @@
+This is a simple and fun interface to the VaporChat idea. I created it mostly to learn about AngularJS and refine my website skills.
